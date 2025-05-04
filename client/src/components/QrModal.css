@@ -1,0 +1,87 @@
+/* src/components/QrModal.css */
+/* Styles for the QR Code Enlargement Modal */
+
+.qr-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75); /* Dark semi-transparent background */
+  z-index: 1000; /* Ensure overlay is above most content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Prevent content touching screen edges */
+  box-sizing: border-box;
+}
+
+.qr-modal {
+  background: white;
+  padding: 25px 35px; /* Adjust padding as needed */
+  border-radius: 8px;
+  max-width: 95vw; /* Limit width relative to viewport */
+  max-height: 95vh; /* Limit height relative to viewport */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative; /* Needed for absolute positioning of close button */
+  z-index: 1001; /* Ensure modal is above overlay */
+  outline: none; /* Remove default focus outline */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  overflow: auto; /* Add scrollbars if content exceeds max height */
+  text-align: center; /* Center text elements like header */
+}
+
+/* Wrapper for modal content if needed */
+.qr-modal-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Close button positioned absolutely */
+.qr-modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: #aaa; /* Light gray */
+  cursor: pointer;
+  padding: 0;
+}
+.qr-modal-close-button:hover {
+  color: #333; /* Darken on hover */
+}
+
+/* Container for the large QR code in the modal */
+/* Uses .qrcode-container base styles from QrCodeDisplay.css */
+/* Add specific class for modal context */
+.modal-qr-container {
+    margin-top: 15px; /* Space below header */
+    margin-bottom: 20px; /* Space above actions */
+    /* Ensure it inherits padding/border if base .qrcode-container is modified */
+    /* Example: Override padding if needed */
+    /* padding: 15px; */
+}
+
+/* Ensure SVG scales within the modal container */
+.modal-qr-container svg {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Error message specific to modal actions (if QrCodeActions.css doesn't cover it) */
+/* If using .action-error from QrCodeActions.css, this isn't strictly needed */
+/* .modal-error {
+    margin-top: 15px;
+    width: 100%;
+} */
+
+/* You generally DON'T need to redefine .qrcode-actions or .action-button here */
+/* unless you want them to look significantly different ONLY inside the modal */

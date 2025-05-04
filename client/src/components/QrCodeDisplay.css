@@ -1,0 +1,61 @@
+/* src/components/QrCodeDisplay.css */
+/* Styles for the list item's structure and QR code container */
+
+.qrcode-block {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+  
+  .qrcode-block:last-child {
+    border-bottom: none;
+  }
+  
+  .qrcode-header {
+    font-family: monospace;
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0 10px 0;
+    text-align: center;
+    word-wrap: break-word; /* Keep word wrap for long text */
+  }
+  
+  .qrcode-header span {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* General container for the QR code itself (both list and modal might share some base) */
+  .qrcode-container {
+    display: inline-block; /* Allows centering via text-align on parent */
+    margin: 0 auto 10px auto; /* Auto margins for horizontal centering, space below */
+    background-color: #ffffff;
+    padding: 10px; /* Padding around the QR code */
+    border: 1px solid #eee; /* Slight border */
+    line-height: 0; /* Prevent extra space below inline-block SVG/canvas */
+  }
+  
+  /* Ensure SVG scales nicely if container somehow gets constrained */
+  .qrcode-container svg {
+    display: block; /* Removes extra space below */
+    height: auto;
+    max-width: 100%;
+  }
+  
+  /* Styles specific to the QR code container in the LIST view */
+  .list-qr-container {
+    cursor: pointer; /* Indicate it's clickable */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; /* Smooth hover effect */
+  }
+  
+  .list-qr-container:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Add depth on hover */
+  }
+  
+  /* REMOVED STYLES (Now handled by QrCodeActions.css):
+     - .qrcode-actions
+     - .action-button (and its :hover, :active, .success, .error states)
+     - .error-message (action-related errors)
+  */

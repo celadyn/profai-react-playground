@@ -1,0 +1,76 @@
+/* src/components/QrGenerator.css */
+/* Styles specific to the generator container and its primary elements */
+
+.qr-generator-container {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 700px; /* Adjust max width as desired */
+    margin: 20px auto; /* Center the generator section on the page */
+    text-align: left; /* Align label/textarea left by default */
+  }
+  
+  .qr-generator-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .qr-generator-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .qr-generator-container textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit; /* Use consistent font */
+    line-height: 1.5;
+    display: block;
+    box-sizing: border-box; /* Include padding/border in width */
+    resize: vertical; /* Allow vertical resize */
+  }
+  
+  .qr-generator-container textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  .generate-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 20px;
+    display: block; /* Take full width */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .generate-button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* The area where the QR code list items will be rendered */
+  .output-area {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center; /* Center the inline-block QrCodeDisplay components */
+    border-top: 1px dashed #eee; /* Optional separator */
+    padding-top: 20px; /* Space above the first QR code */
+  }

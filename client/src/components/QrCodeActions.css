@@ -1,0 +1,63 @@
+/* src/components/QrCodeActions.css */
+
+.qrcode-actions {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px; /* Space above buttons */
+    margin-bottom: 5px; /* Space below buttons before error */
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens if needed */
+  }
+  
+  .action-button {
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    color: #2c3e50;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 1.2em; /* Adjust emoji size if needed */
+    line-height: 1; /* Keep button tight to content */
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.1s;
+    min-width: 35px; /* Ensure minimum tap area */
+    text-align: center;
+  
+    /* Styles for feedback state */
+    display: inline-flex; /* Helps center content */
+    align-items: center;
+    justify-content: center;
+    min-height: 30px; /* Ensure consistent height */
+  }
+  
+  .action-button:hover {
+    background-color: #dfe4e6;
+    border-color: #abb0b4;
+  }
+  
+  .action-button:active {
+    background-color: #d4d9db;
+    transform: scale(0.95); /* Slight press effect */
+  }
+  
+  /* Feedback indicator styles */
+  .action-button.success {
+    background-color: #2ecc71;
+    color: white;
+    border-color: #27ae60;
+  }
+  .action-button.error {
+    background-color: #e74c3c;
+    color: white;
+    border-color: #c0392b;
+  }
+  
+  /* Error message specific to the actions component */
+  .action-error {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 0.85em; /* Slightly smaller error text */
+    margin-top: 5px; /* Space between buttons and error */
+    text-align: center;
+    min-height: 1.2em;
+    width: 100%; /* Ensure it takes width for centering */
+  }
